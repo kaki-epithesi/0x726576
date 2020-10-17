@@ -3,4 +3,5 @@ authors = ["kaki-epithesi"]
 language = "en"
 multilingual = false
 src = "src"
+default-theme = "rust"
 title = "Reverse Engineering"
