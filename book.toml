@@ -3,5 +3,7 @@ authors = ["kaki-epithesi"]
 language = "en"
 multilingual = false
 src = "src"
-default-theme = "rust"
 title = "Reverse Engineering"
+
+[output.html]
+default-theme = "rust"
