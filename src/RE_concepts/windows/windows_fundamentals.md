@@ -24,3 +24,21 @@ e.g: ox x86 it contains the base address of [IDT](https://en.wikipedia.org/wiki/
 -> Inside PCR there is another data structure called `processor region control block(PRCB)`. It is a per-processor structure that contains informationabout the processor , e.g CPU type, model, current thread that is running . next thread to run , queue of DPC.
 
 > `DPC` : A Deferred Procedure Call (DPC) is a Microsoft Windows operating system mechanism which allows high-priority tasks (e.g. an interrupt handler) to defer required but lower-priority tasks for later execution. This permits device drivers and other low-level event consumers to perform the high-priority part of their processing quickly, and schedule non-critical additional processing for execution at a lower priority.
+
+The PCR for a current processor can only be accessed from kernel mode through some special registers.It is stored in the FS segment (x86), GS segment (x64), or one of the system coprocessor registers (ARM).
+
+```bash
+PsGetCurrentThread proc near
+  mov   rax, gs:188h          ; gs:[0] is the PCR, offset 0x180 is the PRCB,
+                              ; offset 0x8 into the PRCB is the CurrentThread
+field
+  retn
+PsGetCurrentThread endp
+
+PsGetCurrentProcess proc near
+  mov   rax, gs:188h          ; get current thread (see above)
+  mov   rax, [rax+0B8h]       ; offset 0x70 into the ETHREAD is the associated
+                              ; process(actually ETHREAD.ApcState.Process)
+  retn
+PsGetCurrentProcess endp
+```
