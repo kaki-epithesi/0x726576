@@ -6,4 +6,4 @@ src = "src"
 title = "Reverse Engineering"
 
 [output.html]
-default-theme = "rust"
+default-theme = "Ayu"
