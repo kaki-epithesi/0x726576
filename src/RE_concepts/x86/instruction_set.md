@@ -316,3 +316,88 @@ They take only one parameter (divisor) and have the following form: DIV/IDIV reg
 Depending on the divisor’s size, DIV will use either AX , DX:AX , or EDX:EAX as the dividend, and the resulting quotient/remainder pair are stored in AL/AH , AX/DX , or EAX/EDX .
 
 ![](/RE_concepts/x86/pic/ins3.png)
+
+### STACK OPERATION
+
+Fundamental data structure in programming languages and OS.\
+Stack is last in first out, with only two basic operations `push` and `pop`.\
+In `x86` STACK is a contiguous memory region pointed by `ESP` and grows downwards.
+
+```bash
+; initial esp = 0xb20000
+01:		mov		eax,0AAAAAAAAh
+02:		mov		ebx,0BBBBBBBBh
+03:		mov		ecx,0CCCCCCCCh
+04:		mov		edx,0DDDDDDDDh
+05:		push		eax
+06:		push		ebx
+07:		pop		esi
+08:		pop		edi
+```
+after line 5:\
+address 0xb1fffc will contain the value 0xAAAAAAAA and ESP will be `0xb1fffc` (=0xb20000-4)
+
+after line 6:\
+address 0xb1fff8 will contain the value 0xBBBBBBBB and ESP will be `0xb1fff8` (=0xb1fffc-4)
+
+after line 7:\
+esi will have the value of 0xBBBBBBBB and ESP will be at (0xb1fff8 + 4) = 	`0xb1fffc`
+
+after line 8:\
+edi will have the value of 0xAAAAAAAA and ESP will be at (0xb1fffc + 4) = 	`0xb20000`
+
+### FUNCTION INVOCATION
+
+Consider the following C code
+```c
+int
+__cdecl addme(short a, short b)
+{
+	return a+b;
+}
+```
+**ASSEMBLY**
+
+```bash
+01:		push		ebp
+02:		mov		ebp, esp
+03:		....
+04:		movsx		eax, word ptr [ebp+8]
+05:		movsx		ecx, word ptr [ebp+0Ch]
+06:		add		eax, ecx
+07:		.....
+08:		mov		esp, ebp
+09:		pop		ebp
+10:		retn
+```
+
+```c
+sum = addme(x, y);
+```
+
+ASSEMBLY
+```bash
+01:		push	eax
+02:		...
+03:		push	ecx
+04:		call addme
+05:		add esp, 8
+```
+
+The CALL instruction performs two operations:
+
+1. It pushes the return address (address immediately after the CALL instruc-
+tion) on the stack.\
+2. It changes EIP to the call destination. This effectively transfers control to
+the call target and begins execution there.
+
+RET simply pops the address stored on the top of the stack into EIP and trans-
+fers control to it.
+
+### Calling Convention
+
+A calling convention is a set of rules dictating how function calls work at the machine level. It is defi ned by the Application Binary Interface (ABI) for a particular system.
+There are many calling conventions, but the popular ones are `CDECL` , `STDCALL` ,
+`THISCALL` , and `FASTCALL` .
+
+![](/RE_concepts/x86/pic/ins4.png)
