@@ -377,18 +377,18 @@ sum = addme(x, y);
 
 ASSEMBLY
 ```bash
-01:		push	eax
+01:		push		eax
 02:		...
-03:		push	ecx
-04:		call addme
-05:		add esp, 8
+03:		push		ecx
+04:		call		addme
+05:		add		esp, 8
 ```
 
 The CALL instruction performs two operations:
 
 1. It pushes the return address (address immediately after the CALL instruc-
 tion) on the stack.\
-2. It changes EIP to the call destination. This effectively transfers control to
+2. It changes `EIP` to the call destination. This effectively transfers control to
 the call target and begins execution there.
 
 RET simply pops the address stored on the top of the stack into EIP and trans-
@@ -401,3 +401,8 @@ There are many calling conventions, but the popular ones are `CDECL` , `STDCALL`
 `THISCALL` , and `FASTCALL` .
 
 ![](/RE_concepts/x86/pic/ins4.png)
+
+How is the function get called 1st `eax` and `ecx` register are being pushed into the stack and the call instruction is invoked, which immediately pushes the next address into the stack, i.e the address of the `add esp, 8` line , and transfers the control to the `addme` function, to be more clear `eip` is pointed to the address of `addme` function.
+
+Lets explain the function assembly line by line .
+on the 1st line base pointer, `ebp` is pushed into the stack.then the stack pointer is pointed to the base pointer. This two steps is known as `function prologue`.then the value at the offset `[ebp + 0x8]` is moved in `eax` register, same with ecx register with the value at offset `[ebp + 0xc]`. Then the add instruction is invoked `eax = eax + ecx`. Then the base pointer is pointed to the stack pointer and ebp is popped. These two steps is known as `function epilogue`. As `ebp` is popped, top of the stack contains the address which is being pushed when the `addme` function is called. clearly address of the `add esp, 8` line.
