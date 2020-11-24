@@ -2,7 +2,7 @@
 
 a .pyc file was given
 
-[link to file]()
+[link to file](https://github.com/kaki-epithesi/0x726576/raw/master/rev_files/phantomctf/s3cr3t.pyc)
 
 ```bash
 root@kali:~/ctf/phantomctf/rev# uncompyle6 s3cr3t.pyc

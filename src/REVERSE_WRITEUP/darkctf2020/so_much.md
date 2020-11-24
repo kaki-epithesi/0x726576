@@ -1,6 +1,6 @@
 # so_much
 
-[link to file]()
+[link to file](https://github.com/kaki-epithesi/0x726576/raw/master/rev_files/darkctf2020/so_much)
 
 its like an argv1 password check .
 
