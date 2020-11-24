@@ -10,3 +10,6 @@
 	- [darkctf2020](./REVERSE_WRITEUP/darkctf2020/dctf.md)
 		- [so_much](./REVERSE_WRITEUP/darkctf2020/so_much.md)
 		- [hw.md](./REVERSE_WRITEUP/darkctf2020/hw.md)
+	- [phantomctf2020](./REVERSE_WRITEUP/phantomctf/phantomctf.md)
+		- [revseng](./REVERSE_WRITEUP/phantomctf/revseng.md)
+		- [s3cret](./REVERSE_WRITEUP/phantomctf/s3cret.md)
