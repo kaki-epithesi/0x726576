@@ -1,5 +1,5 @@
 # CTF WRITEUPS
 
-1-> darkctf2020
+- darkctf2020
 
-2-> phantomctf2020
+- phantomctf2020
