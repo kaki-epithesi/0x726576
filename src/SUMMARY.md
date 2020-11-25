@@ -15,3 +15,6 @@
 	- [phantomctf2020](./REVERSE_WRITEUP/phantomctf/phantomctf.md)
 		- [revseng](./REVERSE_WRITEUP/phantomctf/revseng.md)
 		- [s3cret](./REVERSE_WRITEUP/phantomctf/s3cret.md)
+	- [redpwnctf2020](./REVERSE_WRITEUP/redpwnctf2020/redpwn.md)
+		- [ropes](./REVERSE_WRITEUP/redpwnctf2020/ropes.md)
+		- [bubbly](./REVERSE_WRITEUP/redpwnctf2020/bubbly.md)
