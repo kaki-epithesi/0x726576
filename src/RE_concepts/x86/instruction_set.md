@@ -318,6 +318,7 @@ Depending on the divisor’s size, DIV will use either AX , DX:AX , or EDX:EAX a
 ![](/RE_concepts/x86/pic/ins3.png)
 
 ### STACK OPERATION
+---
 
 Fundamental data structure in programming languages and OS.\
 Stack is last in first out, with only two basic operations `push` and `pop`.\
@@ -347,6 +348,7 @@ after line 8:\
 edi will have the value of 0xAAAAAAAA and ESP will be at (0xb1fffc + 4) = 	`0xb20000`
 
 ### FUNCTION INVOCATION
+---
 
 Consider the following C code
 ```c
@@ -394,7 +396,8 @@ the call target and begins execution there.
 RET simply pops the address stored on the top of the stack into EIP and trans-
 fers control to it.
 
-### Calling Convention
+### CALLING CONVENTION
+---
 
 A calling convention is a set of rules dictating how function calls work at the machine level. It is defi ned by the Application Binary Interface (ABI) for a particular system.
 There are many calling conventions, but the popular ones are `CDECL` , `STDCALL` ,

@@ -4,6 +4,8 @@
 	- [x86](./RE_concepts/x86/x86.md)
 		- [x86 BASIC THEORY](./RE_concepts/x86/x86_basic.md)
 		- [INSTRUCTION SET](./RE_concepts/x86/instruction_set.md)
+	- [ARM](./RE_concepts/ARM/ARM.md)
+		- [BASIC FEATURES](./RE_concepts/ARM/basic_features.md)
 	- [The Windows Kernel](./RE_concepts/windows/windows.md)
 		- [Windows Fundamentals](./RE_concepts/windows/windows_fundamentals.md)
 - [CTF WRITEUPS](./REVERSE_WRITEUP/writeup.md)

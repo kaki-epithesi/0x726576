@@ -2,8 +2,6 @@
 
 **1-> X86**
 
-**2-> THE WINDOWS KERNEL**
+**2-> ARM**
 
-**3-> X64**
-
-**4-> ARM**
+**3-> THE WINDOWS KERNEL**
