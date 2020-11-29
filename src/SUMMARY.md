@@ -18,3 +18,6 @@
 	- [redpwnctf2020](./REVERSE_WRITEUP/redpwnctf2020/redpwn.md)
 		- [ropes](./REVERSE_WRITEUP/redpwnctf2020/ropes.md)
 		- [bubbly](./REVERSE_WRITEUP/redpwnctf2020/bubbly.md)
+	- [BsidesMaharashtra](./REVERSE_WRITEUP/bsidesmh/writeup.md)
+		-	[File](./REVERSE_WRITEUP/bsidesmh/File.md)
+		-	[Login App](./REVERSE_WRITEUP/bsidesmh/Login_App.md)
