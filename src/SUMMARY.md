@@ -6,7 +6,7 @@
 		- [INSTRUCTION SET](./RE_concepts/x86/instruction_set.md)
 	- [ARM](./RE_concepts/ARM/ARM.md)
 		- [BASIC FEATURES](./RE_concepts/ARM/basic_features.md)
-		- [DATA TYPES AND REGISTERS](./data_types_and_registers.md)
+		- [DATA TYPES AND REGISTERS](./RE_concepts/ARM/data_types_and_registers.md)
 	- [The Windows Kernel](./RE_concepts/windows/windows.md)
 		- [Windows Fundamentals](./RE_concepts/windows/windows_fundamentals.md)
 - [CTF WRITEUPS](./REVERSE_WRITEUP/writeup.md)
