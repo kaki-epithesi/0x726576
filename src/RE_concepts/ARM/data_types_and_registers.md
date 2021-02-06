@@ -15,13 +15,13 @@
     - `PC` points to the `current running address + 8` in `ARM state`, and `current running address + 4` in `Thumb state` .
     - Code can directly read from and write to PC. It will immediately cause its execution at the start of the address.
 
-![](/RE_concepts/ARM/pic/arm1.png)
+    ![](/RE_concepts/ARM/pic/arm1.png)
 
-- After line 2 is executed R0 will hold the value of `0x8346+4`=`0x834a`
+    - After line 2 is executed R0 will hold the value of `0x8346+4`=`0x834a`
 
-![](/RE_concepts/ARM/pic/arm2.png)
+    ![](/RE_concepts/ARM/pic/arm2.png)
 
-- When directly reading from `PC` it follows as a normal program counter.
+    - When directly reading from `PC` it follows as a normal program counter.
 
 - ARM stores information about the current execution state in the current program status register(`CPSR`).(Analogy `EFLAGS`)
 
