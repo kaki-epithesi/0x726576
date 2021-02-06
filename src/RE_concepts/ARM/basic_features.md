@@ -21,3 +21,17 @@ ARM : [ADVANCED RISC MACHINE](https://en.wikipedia.org/wiki/ARM_architecture)
   - Abort (ABT)
   - Undefi ned (UND)
   - System (SYS)
+
+- ARM processor also operates in two states.
+  - ARM state
+  - Thumb state
+
+- In ARM state instructions are always 32 bit but in Thumb state it can be both 32bit and 16 bit.
+
+- 32 bit Thumb instructions have `w.` suffix.
+
+- ARM also supports `conditional execution`.
+  - suppose there are two instructios `1`,`2`, it is possible to manipulate that `2` will only be executed iff result of `1` is something desired.
+
+- Another ARM feature , `barrel shifter`.
+  - `MOV R1, R0, LSL #1` here `R1 = R0 << 1` or `R1 = R0 * 2`
