@@ -136,8 +136,8 @@ Getting the flag
 $ ./not_only_z3 
 Enter the string : p4ssw0rd!
 
-Conratulations : HTB{p4ssw0rd!_401749466c2b507f1c8c694836338373}
+Conratulations : GLUG{p4ssw0rd!_401749466c2b507f1c8c694836338373}
 
 ```
 
-> FLAG : HTB{p4ssw0rd!_401749466c2b507f1c8c694836338373}
+> FLAG : GLUG{p4ssw0rd!_401749466c2b507f1c8c694836338373}
